@@ -1,4 +1,4 @@
-#001 - Yokan Party
+#001 - Yokan Party（★4）
 N, L = map(int, input().split())
 K = int(input())
 A = list(map(int, input().split()))

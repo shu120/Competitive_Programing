@@ -1,4 +1,4 @@
-#002 - Encyclopedia of Parentheses
+#002 - Encyclopedia of Parentheses（★3）
 
 def solve(s, open_cnt, close_cnt, N):
 	if len(s) == N:
