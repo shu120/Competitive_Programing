@@ -10,3 +10,4 @@ for i in range(31):
 		w = 100 * (A * i + B * j)
 		if 0 < w <= F:
 			waters.add(w)
+どうしよう
