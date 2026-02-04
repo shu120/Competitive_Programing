@@ -77,3 +77,22 @@ class UnionFind:
 	def size(self, x):
 		"""x が属する集合の要素数を返す"""
 		return self.siz[self.root(x)]
+
+from heapq import heappush, heappop
+def dijkstra(G, start):
+	"""Dijkstra法"""
+	N = len(G)
+	inf = 1 << 62
+	dist = [inf] * N
+	dist[start] = 0
+	q = [(0, start)]
+	while q:
+		dv, v = heappop(q)
+		if dist[v] != dv:
+			continue
+		for u, cost in G[v]:
+			du = dv + cost
+			if du < dist[u]:
+				dist[u] = du
+				heappush(q, (du, u))
+	return dist
