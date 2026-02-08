@@ -1,34 +1,27 @@
-#TLE
+from sortedcontainers import SortedSet, SortedList, SortedDict
 from bisect import bisect_left
 
-def add(x, s):
-	pos = bisect_left(s, x)
-	s.insert(pos, x)
-def remove(x, s):
-	pos = bisect_left(s, x)
-	s.pop(pos)
-
 N, D = map(int, input().split())
-A =list(map(int, input().split()))
+A = list(map(int, input().split()))
 
-s = []
+s = SortedSet()
 ans = 0
 R = 0
 
 for L in range(N):
 	while R < N:
 		x = A[R]
-		pos = bisect_left(s, x)
+		i = s.bisect_left(x)
 
-		if pos > 0 and x - s[pos-1] < D:
+		if i > 0 and x - s[i - 1] < D:
 			break
-		if pos < len(s) and s[pos] - x < D:
+		if i < len(s) and s[i] - x < D:
 			break
 
-		add(x, s)
+		s.add(x)
 		R += 1
 
 	ans += R - L
-	remove(A[L], s)
+	s.remove(A[L])
 
 print(ans)
