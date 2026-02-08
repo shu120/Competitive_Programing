@@ -1,4 +1,4 @@
-from sortedcontainers import SortedSet, SortedList, SortedDict
+from sortedcontainers import SortedSet, SortedList, SortedDict # pyright: ignore[reportMissingImports]
 from bisect import bisect_left
 
 N, D = map(int, input().split())
