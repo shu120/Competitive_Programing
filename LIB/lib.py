@@ -1,4 +1,10 @@
 
+def compress(A):
+	"""座標圧縮"""
+	vals = sorted(set(A))
+	comp = {v:i for i,v in enumerate(vals)}
+	return [comp[x] for x in A]
+
 def dfs(start, G, N):
 	"""DFS(stack): startからの各頂点への距離を返す（到達不能は-1）"""
 	dist = [-1] * N
