@@ -28,9 +28,9 @@ for j in range(1, M + 1):
 
     k = 1
     while k * j <= N:
-        l = k * j
+        n = k * j
         r = min((k + 1) * j - 1, N)
-        s = presum[r] - presum[l - 1]
+        s = presum[r] - presum[n - 1]
         term2 = (term2 + Bj * j * k % MOD * s) % MOD
         k += 1
 
