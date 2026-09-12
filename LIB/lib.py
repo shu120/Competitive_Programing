@@ -60,6 +60,10 @@ class Fenwick_Tree:
             i -= i & -i
         return s
 
+    def range_sum(self, l, r):
+        """[l, r] の和を返す"""
+        return self.sum(r) - self.sum(l - 1)
+
 
 class UnionFind:
     """Union-Find（Disjoint Set Union）
