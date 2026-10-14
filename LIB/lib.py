@@ -1,3 +1,4 @@
+# https://github.com/shu120/Competitive_Programing/blob/main/LIB/lib.py
 
 def compress(A):
     """座標圧縮"""
