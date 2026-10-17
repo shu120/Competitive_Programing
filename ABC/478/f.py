@@ -5,7 +5,7 @@ MOD = 998244353
 stack = []
 ans = 1
 
-for i, curr in enumerate(Q, start = 1):
+for i, curr in enumerate(Q, start=1):
     while stack and stack[-1][0] < curr:
         stack.pop()
 
