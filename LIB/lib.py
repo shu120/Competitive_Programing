@@ -298,4 +298,3 @@ class SegTree:
     def all_query(self):
         """配列全体の情報を取得する"""
         return self.data[1]
-
