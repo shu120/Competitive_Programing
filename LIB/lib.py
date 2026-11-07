@@ -4,8 +4,8 @@ from collections import deque
 from heapq import heappop, heappush
 
 
-def sort(data, cmp):
-    """比較関数を使い、リストを安定マージソートで直接並べ替える。
+def sort_cmp(data, cmp):
+    """cmp_to_key を使わず、比較関数 cmp で安定マージソートで直接並べ替える。
 
     Parameter:
         data: 並べ替えるリスト。空リストも受け付ける。
