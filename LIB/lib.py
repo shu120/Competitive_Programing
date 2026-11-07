@@ -16,7 +16,7 @@ def sort_cmp(data, cmp):
     Order:
         要素数を N として時間 O(N log N)、追加領域 O(N)。比較は O(1) とする。
     使用例:
-        sort(data, lambda a, b: a < b)  # 昇順（降順は a > b）
+        sort_cmp(data, lambda a, b: a < b)  # 昇順（降順は a > b）
     """
     n = len(data)
     if n <= 1:
