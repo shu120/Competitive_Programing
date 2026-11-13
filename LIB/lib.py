@@ -193,10 +193,7 @@ class LCA:
         self.log = self.n.bit_length()
 
         self.depth = [-1] * self.n
-        self.parent = [
-            [-1] * self.n
-            for _ in range(self.log)
-        ]
+        self.parent = [[-1] * self.n for _ in range(self.log)]
 
         self.depth[root] = 0
         stack = [root]
@@ -262,11 +259,7 @@ class LCA:
         """
         w = self.query(u, v)
 
-        return (
-            self.depth[u]
-            + self.depth[v]
-            - 2 * self.depth[w]
-        )
+        return (self.depth[u] + self.depth[v] - 2 * self.depth[w])
 
 
 class SCC:
